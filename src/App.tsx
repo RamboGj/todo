@@ -1,6 +1,7 @@
 import styles from "./App.module.css"
 import Header from "./components/Header"
 import { PlusCircle } from "phosphor-react"
+import TodoList from "./components/TodoList"
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
               Criar
               <PlusCircle size={24} fontWeight="bold"/>
             </button>
+          </div>
+          <div>
+            <TodoList />
           </div>
       </div>
   )

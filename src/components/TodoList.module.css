@@ -1,0 +1,56 @@
+.wrapper {
+    width: 728px;
+    margin: 4rem auto 0;
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listHeader span {
+    padding: 0.25rem 0.5rem;
+    background: var(--gray-500);
+    border-radius: 32%;
+
+    font-weight: bold;
+    color: var(--white);
+    margin-left: 0.5rem;
+}
+.listHeader .created {
+    font-weight: bold;
+    color: var(--blue-400);
+}
+
+.listHeader .done {
+    font-weight: bold;
+    color: var(--purple-500);
+}
+
+.contentList {
+    margin-top: 1.25rem;
+    border-top: 2px solid var(--gray-500);
+    border-radius: 16px;
+
+    padding: 4rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.contentList div {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    line-height: 1.6;
+    color: var(--gray-300);
+}
+
+.subtitle {
+    line-height: 1.6;
+    color: var(--gray-300);
+}

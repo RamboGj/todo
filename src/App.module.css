@@ -117,3 +117,36 @@
     line-height: 1.6;
     color: var(--gray-300);
 }
+
+
+@media (max-width: 768px) {
+    * {
+        font-size: 97.5%;
+    }
+    .searchBarContent {
+        width: 300px;
+        
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .searchButton {
+        justify-content: center;
+    }
+
+    .searchButton > svg {
+        display: none;
+        visibility: hidden;
+    }
+
+    .todoListwrapper {
+        width: 300px;
+    }
+
+    .listHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

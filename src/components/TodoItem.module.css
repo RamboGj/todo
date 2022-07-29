@@ -40,8 +40,16 @@
     height: 24px;
     border-radius: 50%;
 
-    
     cursor: pointer;
+}
+
+.descriptionTodoNotDone {
+    color: var(--gray-100);
+}
+
+.descriptionTodoDone {
+    color: var(--gray-400);
+    text-decoration: line-through;
 }
 
 .checkedIcon {

@@ -38,6 +38,14 @@ function App() {
     setDoneTodos(doneTodos > 0 ? doneTodos - 1 : doneTodos)
   }
 
+  function checkTodos(isChecked: boolean) {
+    if (isChecked) {
+      setDoneTodos(doneTodos - 1)
+    } else {
+      setDoneTodos(doneTodos + 1)
+    }
+  }
+
   return (
       <div className={styles.wrapper}>
           <Header />
@@ -79,9 +87,10 @@ function App() {
             {hasTodos && todos.map((item) => {
                 return (
                     <TodoItem 
-                        deleteTodo={deleteTodos}
-                        description={item.content}
-                        key={item.content}
+                      checkTodo={checkTodos}
+                      deleteTodo={deleteTodos}
+                      description={item.content}
+                      key={item.content}
                     />
                 )
             })}

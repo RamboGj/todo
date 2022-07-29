@@ -24,8 +24,8 @@
     flex: 1;
 }
 
-.content > input {
-    appearance: none;
+.checkTodoButton {
+    background: transparent;
     width: 24px;
     height: 24px;
     border: 2px solid var(--blue-400);
@@ -34,8 +34,13 @@
     cursor: pointer;
 }
 
-.content > input:focus {
+.checkedTodoButton {
     background: var(--purple-500);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    cursor: pointer;
 }
 
 .delete button {

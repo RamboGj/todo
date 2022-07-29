@@ -1,18 +1,56 @@
 import styles from "./TodoItem.module.css"
 import { Trash } from "phosphor-react"
+import { useState } from "react"
 
-export default function TodoItem() {
+interface TodoItemProps {
+    description: string
+    deleteTodo: (description: string) => void
+}
+
+export default function TodoItem({ description, deleteTodo }: TodoItemProps) {
+    const [isChecked, setIsChecked] = useState<boolean>(false)
+
+    function handleDeleteTodo() {
+        deleteTodo(description)
+    }
+
     return (
         <div className={styles.todoBox}>
             <div className={styles.content}>
-                <input type="checkbox"/>
-                <p>
-                    nome da todo nome da todonome da todonome da todonome da todonome da todonome da todonome da todonome da todonome da todonome da todo
-                </p>
+                {!isChecked && 
+                    <>
+                        <div className={styles.checkTodoButton}>
+                        <button 
+                            type="button"
+                            onClick={() => setIsChecked(!isChecked)}
+                        />
+                        </div>
+                        <p>
+                            {description}
+                        </p>
+                    </>
+                }
+
+                {isChecked && 
+                    <>
+                        <div className={styles.checkedTodoButton}>
+                        <button 
+                            type="button"
+                            onClick={() => setIsChecked(!isChecked)}
+                        />
+                        </div>
+                        <p>
+                            {description}
+                        </p>
+                    </>
+                }
+                
             </div>
             <div className={styles.delete}>
-                <button type="button">
-                    <Trash size={24}/>
+                <button 
+                    onClick={handleDeleteTodo}
+                    type="button">
+                        <Trash size={24}/>
                 </button> 
             </div>
         </div>

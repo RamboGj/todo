@@ -34,15 +34,6 @@
     cursor: pointer;
 }
 
-.checkTodoButtonChecked {
-    background: var(--purple-500);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-
-    cursor: pointer;
-}
-
 .descriptionTodoNotDone {
     color: var(--gray-100);
 }
@@ -53,27 +44,11 @@
 }
 
 .checkedIcon {
-    border: 0;
     appearance: none;
     background: var(--purple-500);
-    width: 24px;
-    height: 24px;
     border-radius: 50%;
 
     color: var(--white);
-    cursor: pointer;
-}
-
-/* .todoDescription {
-    text-decoration-line: line-through;
-    color: var(--gray-500);
-} */
-
-
-.checkTodoButton {
-    background: transparent;
-    border-radius: 50%;
-
     cursor: pointer;
 }
 

@@ -25,6 +25,7 @@ export default function TodoItem({ description, deleteTodo, checkTodo }: TodoIte
             <div className={styles.content}>
                     <div>
                         <div
+                            className={styles.checkButtonDiv}
                             onClick={handleCheckTodo}
                         >
                             {!isChecked && 

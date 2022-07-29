@@ -1,5 +1,5 @@
 import styles from "./TodoItem.module.css"
-import { Trash } from "phosphor-react"
+import { Check, Trash } from "phosphor-react"
 import { useState } from "react"
 
 interface TodoItemProps {
@@ -17,34 +17,25 @@ export default function TodoItem({ description, deleteTodo }: TodoItemProps) {
     return (
         <div className={styles.todoBox}>
             <div className={styles.content}>
-                {!isChecked && 
-                    <>
-                        <div className={styles.checkTodoButton}>
-                        <button 
-                            type="button"
-                            onClick={() => setIsChecked(!isChecked)}
-                        />
-                        </div>
-                        <p>
-                            {description}
-                        </p>
-                    </>
-                }
+                    <div>
+                        {!isChecked && 
+                            <button className={styles.checkedIcon}>
+                                <Check size={24}/>
+                            </button>
+                        }
 
-                {isChecked && 
-                    <>
-                        <div className={styles.checkedTodoButton}>
-                        <button 
-                            type="button"
-                            onClick={() => setIsChecked(!isChecked)}
-                        />
-                        </div>
-                        <p>
-                            {description}
-                        </p>
-                    </>
-                }
-                
+                        {isChecked && 
+                            <div className={styles.checkTodoButton}>
+                                <button 
+                                    type="button"
+                                >
+                                </button>
+                            </div>
+                        }
+                    </div>
+                    <p>
+                        {description}
+                    </p>
             </div>
             <div className={styles.delete}>
                 <button 

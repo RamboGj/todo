@@ -35,6 +35,7 @@ function App() {
 
     setTodos(listWithoutDeletedTodo)
     setCreatedTodos(createdTodos - 1)
+    setDoneTodos(doneTodos > 0 ? doneTodos - 1 : doneTodos)
   }
 
   return (

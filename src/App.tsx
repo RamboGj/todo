@@ -48,7 +48,7 @@ function App() {
 
   return (
       <div className={styles.wrapper}>
-          
+          <Header />
           <div className={styles.searchBarContent}>
             <div className={styles.searchBox}>
               <input 
